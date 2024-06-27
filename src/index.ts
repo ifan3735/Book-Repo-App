@@ -5,10 +5,7 @@ import { cors } from 'hono/cors'
 import 'dotenv/config'
 const app = new Hono()
 
-app.use('*', cors({
-  origin: 'http://localhost:5173',
-  allowMethods: ['GET', 'POST', 'PUT', 'DELETE'],
-}));
+app.use('/*', cors());
 
 app.get('/', (c) => {
   return c.text('Hello Hono!')
