@@ -1,0 +1,27 @@
+GET http://localhost:3000/
+
+###
+GET http://localhost:3000/books/1
+
+###
+POST http://localhost:3000/books
+Content-Type: application/json
+
+{
+    "title": "New Book 5",
+    "author": "New Author",
+    "year": "2020"
+}
+
+###
+PUT http://localhost:3000/books/1
+Content-Type: application/json
+
+{
+    "title": "Updated Book",
+    "author": "Updated Author",
+    "year": "2020"
+}
+
+###
+DELETE http://localhost:3000/books/5
